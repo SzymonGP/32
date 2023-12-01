@@ -1,0 +1,33 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+ function pole_grotha()
+ {
+var a_grot= parseFloat(document.getElementById('dlugosc').value);
+var b_grot= a_grot*a_grot;
+ document.getElementById("nazwa_grotha").innerHTML ="Pole kwadratu= "+b_grot.toFixed(2)+" cm^2";
+ }
+ function obwod_grotha()
+ {
+var a_grot= parseFloat(document.getElementById('dlugosc').value);
+var b_grot= 4*a_grot;
+ document.getElementById("nazwa_grotha").innerHTML ="Obwód kwadratu= "+b_grot.toFixed(2)+" cm";
+ }
+ function okno_zamknij()
+ 		 {
+ 		window.close()
+	 	 }
+</script>
+ <h1>Wszystko o KWADRACIE</h1><br><br>
+ Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+ <input type="button" name="pole_grotha" value="Oblicz pole" Onclick="pole_grotha()"><br><br>
+
+ <input type="button" name="obwod_grotha" value="Oblicz obwod" Onclick="obwod_grotha()"><br><br>
+ <div style="color:red;font-size:50px;"id="nazwa_grotha"></div>
+ <br>
+ 		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

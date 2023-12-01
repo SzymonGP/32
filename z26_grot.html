@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ <head>
+	<meta charset="utf-8">
+	
+ </head>
+ <body>
+		<div style="color:navy;font-size:20px;">
+ 				<script language="JavaScript">
+	
+		function okno_zamknij()
+ 		 {
+ 		window.close()
+	 	 }
+		 
+		function pole_grotha(a,b,h) 
+		{
+		var a = parseFloat(document.getElementById('dlugosc1').value);
+		var b = parseFloat(document.getElementById('dlugosc2').value);
+		var h = parseFloat(document.getElementById('dlugosc3').value);
+
+		var pod = ((a + b)*h)/2;
+		 document.getElementsByName('pod')[0].value=pod.toFixed(2);
+		}
+		
+		function obw_grotha(a,b,h) 
+		{
+		var a = parseFloat(document.getElementById('dlugosc1').value);
+		var b = parseFloat(document.getElementById('dlugosc2').value);
+		var h = parseFloat(document.getElementById('dlugosc3').value);
+		var bok = (b-a)/2;
+		var bok = Math.sqrt(Math.pow(bok,2)+Math.pow(h,2))
+		var obw = bok*2+a+b;
+		document.getElementsByName('obw')[0].value=obw.toFixed(2);
+		}
+	
+ 				</script>
+				<form name="formularz" action="..." onsubmit="pole_grotha(this.dlugosc1.value,this.dlugosc2.value,this.dlugosc3.value); obw_grotha(this.dlugosc1.value,this.dlugosc2.value,this.dlugosc3.value);return false">
+
+		Podaj mniejszą podstawę = <input type="text" id="dlugosc1" size="6";> 
+		Podaj większą podstawę = <input type="text" id="dlugosc2" size="6";> 
+		Podaj wysokość = <input type="text" id="dlugosc3" size="6";> <br><br><br>
+		<input TYPE="submit" Value="oblicz" ><br><br><br>
+		   Pole = <input size="6" name="pod";>
+		   Obwód = <input size="6" name="obw";>
+			<br><br><br>
+ 		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+		</div>
+ </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+ <title> Użycie fukcji </title>
+	<meta charset="utf-8">
+</head>
+<body>
+ <div style="color:navy;font-size:50px;">
+	<script language="JavaScript">
+		var a=parseFloat(prompt("a=",""));
+		var b=parseFloat(prompt("b=",""));
+		function okno_zamknij()
+ 		 {
+ 		window.close()
+	 	 }
+		function suma_grot(a,b) 
+		{
+		return a + b;
+		}
+		
+		function odejmowanie_grot(a,b) 
+		{
+		return a - b;
+		}
+		
+		function mnozenie_grot(a,b) 
+		{
+		return a * b;
+		}
+		
+		function od_kwadratu_grot(a,b) 
+		{
+		return "<br>" +a+ "^2 =" + a * a + "<br>" +b+ "^2 ="+ b * b;
+		}
+		
+		function reszta_z_dzielenia_a_przez_b_grot(a,b) 
+		{
+		return a % b;
+		}
+		
+		document.write("Suma="+suma_grot(a,b)+"<br>");
+		document.write("Odejmowanie="+odejmowanie_grot(a,b)+"<br>");
+		document.write("Mnozenie="+mnozenie_grot(a,b) +"<br>");
+		
+		document.write("Do kwadratu"+od_kwadratu_grot(a,b) +"<br>");
+
+		document.write("Reszta z dzielenia="+reszta_z_dzielenia_a_przez_b_grot(a,b) +"<br>");
+
+</script>
+</div>
+</body>
+<br>
+ 		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</html>

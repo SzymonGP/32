@@ -1,0 +1,47 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+ 
+    function drabina_grotha(x_grot,d_grot)
+{
+var x_grot = parseFloat(document.getElementById('dlugosc1').value);
+var d_grot = parseFloat(document.getElementById('dlugosc2').value);
+var drabina_grot = Math.sqrt(x_grot*x_grot+d_grot*d_grot);
+ document.getElementsByName('drabina')[0].value=drabina_grot.toFixed(2);
+}
+
+	function alfa_grotha(x_grot,d_grot)
+{
+var x_grot = parseFloat(document.getElementById('dlugosc1').value);
+var d_grot = parseFloat(document.getElementById('dlugosc2').value);
+var a_grot = x_grot/d_grot;
+var rad_grot = Math.atan(a_grot);
+var alfa_grot = (rad_grot*180)/Math.PI;
+
+  document.getElementsByName('alfa')[0].value=alfa_grot.toFixed(2);
+
+}
+
+ function okno_zamknij()
+ 		 {
+ 		window.close()
+	 	 }
+</script>
+
+ <h1>Obliczanie  kąta alfa i długości drabiny</h1><br><br>
+ <form name="formularz" action="..." onsubmit="drabina_grotha(this.dlugosc1.value,this.dlugosc2.value); alfa_grotha(this.dlugosc1.value,this.dlugosc2.value);return false">
+ Podaj d = <input type="text" id="dlugosc1" size="6";> 
+ Podaj x = <input type="text" id="dlugosc2" size="6";> <br><br><br>
+ 
+<input TYPE="submit" Value="oblicz" ><br><br><br>
+	  
+   Drabina = <input size="6" name="drabina";>
+   
+   Alfa = <input size="6" name="alfa";><br><br><br>
+
+ 		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

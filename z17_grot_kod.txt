@@ -1,0 +1,46 @@
+<html>
+ <head>
+	<meta charset="utf-8">
+<script type="text/javascript">
+ function okno_zamknij_grotha()
+ {
+ window.close()
+ }
+ </script>
+ </head>
+  <body>
+	<script language="JavaScript">
+		document.write("1.Sposoby wyprowadzania danych w JS,".fontsize(4).bold()+"<br>");
+		document.write("-z użyciem dokument.write()"+"<br>");
+		document.write("-z użyciem okienka alert()"+"<br>");
+		document.write("-do okienek formularza"+"<br>");
+		document.write("-do tabeli"+"<br>"+"<br>");
+		
+		document.write("2.Czym jest funkcja w JS?".fontsize(4).bold()+"<br>");
+		document.write("-Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy"+"<br>");
+		document.write("-Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod"+"<br>");
+		document.write("-Funkcja może mieć argumenty, które wchodzą do wnętrza funkcji i są tam przetwarzane np.suma_kry(a, b)"+"<br>");
+		document.write("-Może(nie zawsze) zwrócić obliczoną wartość zapisaną po słowie kluczowym return"+"<br>"+"<br>");
+		
+		document.write("3.Omów metody getElementsByName, getElementById, getElementByTagName".fontsize(4).bold()+"<br>");
+		document.write("getElementById( id ) ".fontsize(2).bold());
+				document.write("-dostęp do wszystkich elementów o konkretnej wartości atrybutu id "+"<br>");
+		document.write("getElementByTagName(znacznik) ".fontsize(2).bold());
+				document.write("-dostęp do wszystkich elementów o typie znacznika, np. P lub DIV "+"<br>");
+		document.write("getElementByName(nazwa) ".fontsize(2).bold());
+				document.write("-dostęp do wszystkich elementów o konkretnejwartości atrybutu"+"<br>"+"<br>");
+				
+				
+		document.write("4.Omów właściwości innerHTML innerText className".fontsize(4).bold()+"<br>");
+		document.write("innerHTML ".fontsize(2).bold());
+				document.write("-jest to właściwość, która umożliwia odczyt, zmodyfikowanie, wstawienie, albo usunięcie kodu HTML z danego elementu HTML np. w tabeli"+"<br>");		
+		document.write("innerText ".fontsize(2).bold());
+				document.write("-umożliwia określenie ciągu znaków który zostanie umieszczony w elemencie"+"<br>");
+		document.write("className ".fontsize(2).bold());
+				document.write("-umożliwia określenie klasy CSS użytej do prezentacji elementu"+"<br>"+"<br>");
+
+    </script>
+	 <input type="button" value="zamknij okno" onclick="okno_zamknij_grotha()"/>
+
+  </body>
+</html>

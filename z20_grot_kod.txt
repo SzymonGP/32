@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+p#DLUGOSC
+ {
+ font-size:60px;
+color:#6666FF;
+}
+</style>
+</head>
+<body>
+  <script language="JavaScript">
+function AB_grotha()
+{
+var ax_grot = parseFloat(document.getElementById('ax').value);
+var ay_grot = parseFloat(document.getElementById('ay').value);
+var bx_grot = parseFloat(document.getElementById('bx').value);
+var by_grot = parseFloat(document.getElementById('by').value);
+
+var potega = Math.pow(ax_grot-bx_grot,2);
+var potega1 = Math.pow(ay_grot-by_grot,2);
+var dlugosc = Math.sqrt(potega+potega1);
+document.getElementById("DLUGOSC").innerHTML = "Bok AB = "+dlugosc;
+}
+
+
+function AC_grotha()
+{
+var ax_grot = parseFloat(document.getElementById('ax').value);
+var ay_grot = parseFloat(document.getElementById('ay').value);
+var cx_grot = parseFloat(document.getElementById('cx').value);
+var cy_grot = parseFloat(document.getElementById('cy').value);
+
+var potega = Math.pow(ax_grot-cx_grot,2);
+var potega1 = Math.pow(ay_grot-cy_grot,2);
+var dlugosc = Math.sqrt(potega+potega1);
+document.getElementById("DLUGOSC").innerHTML ="Bok AC = "+dlugosc;            
+}
+
+
+function BC_grotha()
+{
+var bx_grot = parseFloat(document.getElementById('bx').value);
+var by_grot = parseFloat(document.getElementById('by').value);
+var cx_grot = parseFloat(document.getElementById('cx').value);
+var cy_grot = parseFloat(document.getElementById('cy').value);
+
+var potega = Math.pow(bx_grot-cx_grot,2);
+var potega1 = Math.pow(by_grot-cy_grot,2);
+var dlugosc = Math.sqrt(potega+potega1);
+document.getElementById("DLUGOSC").innerHTML ="Bok BC = "+dlugosc;
+}
+
+
+function okno_zamknij()
+{
+window.close()
+}
+ </script>
+
+
+
+
+ Podaj x punktu w punkcie A  
+<input type="text" id="ax" size="6" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Podaj y punktu w punkcie A
+<input type="text" id="ay" size="6" >
+ <br> <br>
+
+ Podaj x punktu w punkcie B 
+ <input type="text" id="bx" size="6" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Podaj y punktu w punkcie B 
+ <input type="text" id="by" size="6" >
+  <br> <br>
+ 
+ Podaj x punktu w punkcie C  
+ <input type="text" id="cx" size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Podaj y punktu w punkcie C  
+ <input type="text" id="cy"size="6" >
+ <br><br>
+
+
+<input type="button" name="AB" value="AB" Onclick="AB_grotha()"><br><br>
+<input type="button" name="AC" value="AC" Onclick="AC_grotha()"><br><br>
+<input type="button" name="BC" value="BC" Onclick="BC_grotha()"><br>
+
+<p id="DLUGOSC"></p>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

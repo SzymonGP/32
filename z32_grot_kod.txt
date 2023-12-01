@@ -1,0 +1,45 @@
+<html>
+ <head>
+ <style>
+ div
+ {
+	font-size:20px;
+ }
+ </style>
+ <div>
+ <script type="text/javascript">
+ function router_grotha(model_p,kolor_p,gwarancja_p,cena_p)//początek konstruktora
+{
+this.model=model_p;
+this.kolor=kolor_p;
+this.gwarancja=gwarancja_p;
+this.cena=cena_p;
+}//koniec konstruktora
+
+ router_grotha.prototype.wyswietl = function () //definicja metody
+ {
+ alert(this.model + ' jest ' + this.kolor + ' ma gwarancję na '+ this.gwarancja +' i kosztuje ' + this.cena);
+ };
+var router1 = new router_grotha('MK05D', 'czarny', '24 miesiące', '259.99 złoty');  // nowy obiekt router1
+var router2 = new router_grotha('D1SP0', 'bialy', '12 miesiecy','699.99 złoty');	// nowy obiekt router2
+var router3 = new router_grotha('L0R4S', 'szary', '36 miesiecy','499.99 złoty');	// nowy obiekt router3
+
+router1.wyswietl(); // uruchomienie metody wyswietl() dotyczącej routerów 1-3
+router2.wyswietl();
+router3.wyswietl();
+ document.write("dostęp do właściwości"+"<br>");
+// poniżej dostęp do pól wszystkich routerów
+ document.write("Router pierwszy"+", "+router1.model+", "+router1.kolor+", "+router1.gwarancja+", "+router1.cena+"<br>");
+  document.write("Router drugi"+", "+router2.model+", "+router2.kolor+", "+router2.gwarancja+", "+router2.cena+"<br>");
+   document.write("Router trzeci"+", "+router3.model+", "+router3.kolor+", "+router3.gwarancja+", "+router3.cena+"<br>");
+   
+ </script>
+ <div>
+ </head>
+<body>
+<br>
+ programowanie obiektowe
+</body>
+</html>
+
+

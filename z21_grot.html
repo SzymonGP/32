@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>
+ Przykład obliczenia objętości i pola powierzchni walca.
+</title>
+ <script language="JavaScript">
+function V_grotha(r,h)
+{
+ r_liczba=parseFloat(r)
+ h_liczba=parseFloat(h)
+ V_wynik=Math.PI*r_liczba*r_liczba*h_liczba
+ document.getElementsByName('obj')[0].value=V_wynik.toFixed(2); /* na dokument */
+ alert("Objętość="+V_wynik.toFixed(2)+" cm^3"); /*do okna Alert */
+ pokaz1.innerHTML="Objętość="+V_wynik.toFixed(2)+" cm^3"+"<br>"; /* do tabeli */
+}
+function Pc_grotha(r,h)
+{
+ r_liczba=parseFloat(r)
+ h_liczba=parseFloat(h)
+ Pc_wynik=2*Math.PI*r_liczba*r_liczba+2*Math.PI*r_liczba*h_liczba
+ document.getElementsByName('pole')[0].value=Pc_wynik.toFixed(2);
+ alert("Pole powierzchni="+Pc_wynik.toFixed(2)+" cm^2");
+ pokaz2.innerHTML="Pole powierzchni="+Pc_wynik.toFixed(2)+"cm^2";
+}
+function okno_zamknij()
+ 		 {
+ 		window.close()
+	 	 }
+ </script>
+</head>
+<body>
+ Obliczenia objętości i pola powierzchni walca.
+<br> <br>
+<form name="formularz" action="..." onsubmit="V_grotha(this.promien.value,this.wysokosc.value);
+Pc_grotha(this.promien.value,this.wysokosc.value);return false">
+ Podaj promień=
+ <input size="6" name="promien">
+ Podaj wysokość=
+ <input size="6" name="wysokosc">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ Objętość=
+ <input size="6" name="obj">
+ Pole powierzchni=
+ <input size="6" name="pole">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+<br>
+ 		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

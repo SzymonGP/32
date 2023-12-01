@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+ <head>
+	<meta charset="utf-8">
+		<script>
+ 		  function okno_zamknij()
+ 		 {
+ 		window.close()
+	 	 }
+ 		</script>
+ </head>
+ <body>
+		<div style="color:navy;font-size:51px;">
+ 				<script language="JavaScript">
+		var x1_grot=prompt("Podaj liczbę A=","");
+		var x2_grot=prompt("Podaj liczbę B=","");
+		
+		 var x1_gro=parseFloat(x1_grot);
+		 var x2_gro=parseFloat(x2_grot);
+		 var rad_gro=(x1_gro*Math.PI)/180;
+		 var x1pow_gro = Math.pow(x1_grot,5);
+		 var x2pow_gro = Math.pow(x2_grot,4)
+		 var abs_gro = Math.abs(x1_gro-x2_grot)
+		 var y1_gro = 3*(x1_grot*6/8);
+		 var y2_gro = 2* (Math.cos(rad_gro))+3*(Math.sin(rad_gro));	
+		 var y3_gro = Math.pow(x1pow_gro+2*x2pow_gro,1.0/3.0)*abs_gro
+			
+ document.write("Podane liczby to: x1=" + x1_gro + ",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2=" + x2_gro + "<br>");
+ document.write("W stopniach x1=" + x1_gro + ",&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W radianach x1=" + rad_gro.toFixed(2) + "<br>");
+ document.write("y1 = " + y1_gro.toFixed(2) +"<br>");
+ document.write("y2 = " + y2_gro.toFixed(2) +"<br>");
+ document.write("y3 = " + y3_gro.toFixed(2) +"<br>");
+ 
+ 				</script>
+				<br>
+ 		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+		</div>
+ </body>
+</html>

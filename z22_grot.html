@@ -1,0 +1,40 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+ function pole_grotha()
+ {
+var a_grot= parseFloat(document.getElementById('dlugosc1').value);
+var b_grot= parseFloat(document.getElementById('dlugosc2').value);
+var b_grot= a_grot*b_grot;
+ document.getElementById("grotha").innerHTML ="Pole prostokąta= "+b_grot+" cm";
+ }
+ function obwod_grotha(a_grot,b_grot)
+ {
+var a_grot= parseFloat(document.getElementById('dlugosc1').value);
+var b_grot= parseFloat(document.getElementById('dlugosc2').value);
+var b_grot= a_grot*2+b_grot*2;
+ document.getElementById("grotha").innerHTML ="Obwód prostokąta= "+b_grot+" cm";
+ }
+ function okno_zamknij()
+ 		 {
+ 		window.close()
+	 	 }
+</script>
+
+ <h1>Obliczanie pola i obwodu prostokąta</h1><br><br>
+ Podaj długość boku pierwszego: <input type="text" id="dlugosc1" value="podaj długość"> cm<br><br><br>
+  Podaj długość boku drugiego: <input type="text" id="dlugosc2" value="podaj długość"> cm<br><br><br>
+  
+  
+ <input type="button" name="pole_grotha" value="Oblicz pole" Onclick="pole_grotha()"><br><br>
+
+ <input type="button" name="obwod_grotha" value="Oblicz obwod" Onclick="obwod_grotha()"><br><br>
+ 
+ <div style="color:red;font-size:50px;"id="grotha"></div>
+ <br>
+ 		 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
